@@ -8,6 +8,31 @@ h1, h2 {
  }
 
  div {
-    padding-left: 2em;
-    padding-right:2em;
+    padding : 2em;
  }
+
+ section > div > div {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+   
+ }
+
+ section > div > div > div {
+
+    border:3px solid black;
+    font-size: 1.5em;
+    /*background-color: blueviolet;*/
+    height : 5em;
+    line-height : 5em;
+    width : 5em;
+    margin-left: 2em;
+    text-align:center;
+
+   
+ }
+
+
+
+ 
