@@ -1,20 +1,20 @@
 
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    display:flex;
+   font-family: Arial, Helvetica, sans-serif;
+   display:flex;
 flex-direction: column;
 column-gap: 1.5rem;
 align-items: flex-start;
 overflow: auto;
- border: 5px solid yellow;
+border: 5px solid yellow;
 }
 
 header {
 
-   flex:1;
-   height: 30em;
-   border: 5px solid red;
+  flex:1;
+  height: 30em;
+  border: 5px solid red;
 }
 main {
 padding-top: 12em;
@@ -25,39 +25,39 @@ scroll-padding-top: 30em;
 }
 */
 h1, h2 {
-    padding: 1em;
-   
- }
+   padding: 1em;
+  
+}
 
 
- section > div > div {
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-   
- }
-
- .flexColumn {
-
-   display: flex;
-   flex-direction: column;
-  padding-left: 2em;
-  padding-top: 0.5em;
-  /*border: 5px solid yellow;*/
- }
-
- .flexRow {
+section > div > div {
 
    display: flex;
    flex-direction: row;
-   justify-content:center;
    align-items: center;
   
-  /*border: 5px solid red;*/
- }
+}
+
+.flexColumn {
+
+  display: flex;
+  flex-direction: column;
+ padding-left: 2em;
+ padding-top: 0.5em;
+ /*border: 5px solid yellow;*/
+}
+
+.flexRow {
+
+  display: flex;
+  flex-direction: row;
+  justify-content:center;
+  align-items: center;
  
- 
+ /*border: 5px solid red;*/
+}
+
+
 
 .xarxesSocials {
 padding-left: 1em;
@@ -66,44 +66,44 @@ padding-top: 0.5em;
 
 .infoGeneral {
 
-   font-size: small;
-   font-weight: bold;
-   color: white;
-   padding-right: 1em;
+  font-size: small;
+  font-weight: bold;
+  color: white;
+  padding-right: 1em;
 
 }
 
 .push {
-   margin-left: auto;
+  margin-left: auto;
 
 }
 
 
- section > div > div > div {
+section > div > div > div {
 
-    border:3px solid black;
-    font-size: 1.5em;
-    /*background-color: blueviolet;*/
-    height : 5em;
-    line-height : 5em;
-    width : 5em;
-    margin-left: 2em;
-    text-align:center;
+   border:3px solid black;
+   font-size: 1.5em;
+   /*background-color: blueviolet;*/
+   height : 5em;
+   line-height : 5em;
+   width : 5em;
+   margin-left: 2em;
+   text-align:center;
 
-   
- }
+  
+}
 p {
 
-   line-height: 1.5rem;
+  line-height: 1.5rem;
 }
 
-a {
-   font-weight: bold;
-   text-decoration: none;
-   color: black;
+li > a {
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
 }
 
-a:hover {
+li > a:hover {
 
 color: rgb(128, 126, 126);
 cursor: pointer;
@@ -111,58 +111,114 @@ cursor: pointer;
 }
 
 
+
+
 li > a {
 
-   color : red;
-  
-   scroll-margin-top: 100em;
+  color : red;
+ 
+  scroll-margin-top: 100em;
 }
- ul.menu {
 
-   display:flex;
-   flex-direction : row;
-   justify-content: space-between;
+nav.menuNav{
+  flex:3;
+  text-decoration: underline;
+  color :red;
+}
+ul.menu {
+
+  display:flex;
+  flex-direction : row;
+  justify-content: space-between;
   
-  /* border:3px solid black;*/
- }
+ /* border:3px solid black;*/
+}
 
- li.menu-item {
-   font : 500 1.125rem / 1.625rem 'Barlow', sans-serif;
-   flex:1;
- /*  scroll-margin-top: 30em;*7
-   /*border:3px solid blue;*/
-   list-style-type: none;
- }
+li.menu-item {
+  font : 500 1.125rem / 1.625rem 'Barlow', sans-serif;
+  flex:1;
+/*  scroll-margin-top: 30em;*7
+  /*border:3px solid blue;*/
+  list-style-type: none;
+  
+}
+
+li.menu-item:active {
+  text-decoration: underline;
+}
 .topCapsa {
 
-   background-color: black;
-   position:fixed;
-   top: 0;
-   left:0;
-   right:0;
-   height: 10em;
+  background-color: black;
+  position:fixed;
+  top: 0;
+  left:0;
+  right:0;
+  height: 10em;
 
- 
+
 
 }
 
 .block {
 
-  background-color: white;
- 
+ background-color: white;
+
 }
 
 
+.infoActivitat {
+  display: none;
+ 
+  opacity: 100;
+  padding: 20px;
+  margin: 20px auto;
+  border: 1px solid #333;
+  color :red;
+}
+
+#infoActivitat1 {
+  display:"";
+}
+
+#calsotada {
+  color :red;
+}
+
+
+
+   
+nav.subMenuNav  {
+      
+      padding: 10px 0;
+  }
+
+  nav.subMenuNav > ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+  }
+
+  nav.subMenuNav > ul > li {
+      display: inline-block;
+      cursor : pointer;
+      margin-right: 20px;
+      color: red;
+    
+  }
+
+ 
+
 :target {
-   scroll-margin-top: 200px;
- }
+  scroll-margin-top: 200px;
+}
 
- @media (max-width : 600px) {
-   .infoGeneral {
-      display:none;
-   }
+@media (max-width : 600px) {
+  .infoGeneral {
+     display:none;
+  }
 
-   ul.menu {
-      display:none;
-   }  
- }
+  ul.menu {
+     display:none;
+  }  
+}

@@ -10,6 +10,7 @@
     />
     <meta name="keywords" content="ateneu, cultura, associació, gavà" />
     <link rel="stylesheet" href="styles.css" />
+
     <title>Ateneu La Màquia</title>
   </head>
   <body>
@@ -78,7 +79,7 @@
             />
             <img src="resources/logoPetit.png" alt="Logo Ateneu La Màquia" />
           </picture>
-          <nav role="navigation" style="flex: 3" class="menu">
+          <nav class="menuNav" role="navigation">
             <ul class="menu">
               <li class="menu-item"><a href="#quiSom">Qui som?</a></li>
               <li class="menu-item"><a href="#activitats">Activitats </a></li>
@@ -166,15 +167,41 @@
             nulla culpa. Veniam adipisicing commodo velit irure duis quis. Et
             est reprehenderit enim esse est ea deserunt sit ullamco.
           </p>
-          <div class="flexdiv">
-            <div>Correbars</div>
-            <div>Calçotada</div>
-            <div>Vermuts</div>
+          <nav class="subMenuNav" role="navigation">
+            <ul id="llistaActivitats" class="menu">
+              <li id="activitat1" class="menu-item">Correbars</li>
+              <li id="activitat2" class="menu-item">Calçotada</li>
+              <li id="activitat3" class="menu-item">Vermuts</li>
+            </ul>
+          </nav>
+
+          <div id="infoActivitat1" class="infoActivitat">
+            Lorem incididunt aliquip dolore nulla. Cupidatat in occaecat culpa
+            qui reprehenderit ullamco commodo sit aliqua dolore nisi deserunt
+            irure. Do dolore laboris fugiat minim sint aliqua est quis anim
+            adipisicing eiusmod. Qui eu nisi ullamco ut adipisicing enim duis
+            voluptate.Sint aute velit do duis labore Lorem officia quis quis
+            labore in fugiat commodo. Cillum duis et amet non sunt exercitation
+            qui ullamco deserunt aliquip do. Esse qui proident eiusmod in et. Ad
+            exercitation tempor enim mollit elit elit. Laborum labore occaecat
+            sint sit ea incididunt eiusmod quis deserunt exercitation est id.
+            Ipsum sunt minim non elit velit nostrud dolor incididunt nisi
+            occaecat fugiat esse ipsum.
           </div>
-          <div class="flexdiv">
-            <div>Presentacions</div>
-            <div>Cineforums</div>
-            <div>Tallers</div>
+          <div id="infoActivitat2" class="infoActivitat">
+            Adipisicing est Lorem Lorem excepteur fugiat laborum esse nulla
+            pariatur ex adipisicing.Cillum velit laborum duis et enim mollit
+            ullamco Lorem velit sint cupidatat consectetur Lorem. Veniam
+            occaecat nisi anim pariatur ea ut sit reprehenderit dolore dolor
+            duis elit reprehenderit. Duis velit sint incididunt cillum deserunt
+            mollit.Cupidatat amet qui cupidatat mollit. Sit eiusmod et
+            exercitation voluptate mollit aliquip labore amet sunt ut elit. Ea
+            amet dolore dolor pariatur cillum irure pariatur. Commodo duis
+            consectetur qui ipsum irure fugiat. Elit excepteur aliqua non fugiat
+            ut id. Do id nulla in qui magna laboris anim.
+          </div>
+          <div id="infoActivitat3" class="infoActivitat">
+            Ullamco voluptate dolor reprehenderit dolore sunt.
           </div>
         </div>
       </section>
@@ -210,4 +237,31 @@
       </section>
     </main>
   </body>
+
+  <script>
+    const lista = document.getElementById("llistaActivitats");
+    const divsContenido = document.querySelectorAll(".infoActivitat");
+
+    // Agrega un event listener a la lista
+    lista.addEventListener("click", function (event) {
+      const activitat = event.target;
+
+      // Verifica si el elemento clicado es un li
+      if (activitat.tagName === "LI") {
+        // Obtiene el id del li clicado
+        const idLiActiu = activitat.id;
+
+        // Recorre los divs de contenido
+        divsContenido.forEach(function (div) {
+          // Si el id del div coincide con el id del li clicado, lo muestra; de lo contrario, lo oculta
+
+          if (div.id === "infoActivitat" + idLiActiu.slice(9)) {
+            div.style.display = "block";
+          } else {
+            div.style.display = "none";
+          }
+        });
+      }
+    });
+  </script>
 </html>
