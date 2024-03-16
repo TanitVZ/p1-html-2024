@@ -56,7 +56,7 @@ padding-top: 0.5em;
    font-size: small;
    font-weight: bold;
    color: white;
- 
+   padding-right: 1em;
 
 }
 
@@ -64,6 +64,8 @@ padding-top: 0.5em;
    margin-left: auto;
 
 }
+
+
  section > div > div > div {
 
     border:3px solid black;
@@ -86,13 +88,15 @@ padding-top: 0.5em;
    left:0;
    right:0;
    height: 3em;
-   
-   padding-left:1em;
-   padding-right: 1em;
+
  
 
 }
 
+.block {
+   
+   background-color: white;
+}
  @media (max-width : 600px) {
    .infoGeneral {
       display:none;
