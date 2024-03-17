@@ -23,6 +23,6 @@ lista.addEventListener("click", function (event) {
 });
 
 function isMobile() {
-  return window.innerWidth <= 650; 
+  return window.innerWidth <= 750; 
 }
 
