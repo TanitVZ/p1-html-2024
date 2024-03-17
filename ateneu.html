@@ -67,7 +67,7 @@
             <span> lamaquia.ap@gmail.com | Carrer Sant Nicasi, 41 Gavà </span>
           </div>
         </div>
-        <div class="flexRow block">
+        <div class="flexRowC">
           <picture>
             <source
               srcset="resources/logoMitja.png"
@@ -266,6 +266,7 @@
     const lista = document.getElementById("llistaActivitats");
     const divsContenido = document.querySelectorAll(".infoActivitat");
 
+   
     lista.addEventListener("click", function (event) {
       const activitat = event.target;
 
@@ -273,12 +274,22 @@
         const idLiActiu = activitat.id;
         divsContenido.forEach(function (div) {
           if (div.id === "infoActivitat" + idLiActiu.slice(9)) {
-            div.style.display = "flex";
+            if (isMobile())  
+              div.style.display = "contents"; 
+            else {
+             div.style.display = "flex";
+
+            }
           } else {
             div.style.display = "none";
           }
         });
       }
     });
+
+    function isMobile() {
+      return window.innerWidth <= 650; 
+    }
+
   </script>
 </html>

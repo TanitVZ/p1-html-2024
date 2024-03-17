@@ -8,9 +8,9 @@
 body {
   /* font-family: Arial, Helvetica, sans-serif;*/
  font: 500 1.125rem / 1.625rem 'Barlow', sans-serif;
-   display:flex;
+display:flex;
 flex-direction: column;
-column-gap: 1.5rem;
+
 align-items: flex-start;
 overflow: auto;
 /*border: 5px solid yellow;*/
@@ -19,11 +19,11 @@ overflow: auto;
 header {
 
   flex:1;
-  height: 30em;
+  height: 25em;
  /* border: 5px solid red;*/
 }
 main {
-padding-top: 12em;
+padding-top: 10em;
 flex:3;
 /*border: 5px solid blue;*/
 scroll-padding-top: 30em;
@@ -42,7 +42,12 @@ section {
   text-align:justify;
 }
 
+p {
 
+  line-height: 1.5rem;
+  padding-bottom: 1em;
+
+}
 .flexColumn {
 
   display: flex;
@@ -52,7 +57,7 @@ section {
  /*border: 5px solid yellow;*/
 }
 
-.flexRow {
+.flexRow , .flexRowC {
 
   display: flex;
   flex-direction: row;
@@ -61,6 +66,13 @@ section {
  
  /*border: 5px solid red;*/
 }
+
+.flexRowC {
+
+ background-color: white;
+
+}
+
 .flexRow2 {
 display: flex;
 flex:2;
@@ -107,11 +119,7 @@ padding-top: 0.5em;
 
 
 
-p {
 
-  line-height: 1.5rem;
-  padding-bottom: 1em;
-}
 
 li a {
   font-weight: bold;
@@ -169,11 +177,7 @@ li.menu-item {
 
 }
 
-.block {
 
- background-color: white;
-
-}
 
 #infoActivitat1 {
   display:flex;
@@ -213,12 +217,35 @@ li.menu-item {
   scroll-margin-top: 210px;
 }
 
-@media (max-width : 600px) {
+@media (max-width : 650px) {
   .infoGeneral {
      display:none;
   }
 
-  ul.menu {
+  .menuNav ul.menu {
      display:none;
   }  
+
+.flexRow {
+  display:block;
+}
+.flex_3 {
+  padding-left: 0px;
+}
+
+.imatgeRound, .imatgeRoundH {
+  width: 70%; 
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+ 
+ }
+
+.infoActivitat {
+  display: none;
+}
+
+#infoActivitat1, #infoActivitat2, #infoActivitat3  {
+  display:none;
+}
 }
