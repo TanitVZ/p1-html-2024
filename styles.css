@@ -41,27 +41,6 @@ section {
   margin-right:2em;
   text-align:justify;
 }
-section > div > div {
-/*
-   display: flex;
-   flex-direction: row;
-   align-items: center;
-  */
-}
-
-
-section > div > div > div {
-/*
-  border:3px solid black;
-  font-size: 1.5em;
-  height : 5em;
-  line-height : 5em;
-  width : 5em;
-  margin-left: 2em;
-  text-align:center;
-
-  */
-}
 
 
 .flexColumn {
@@ -134,26 +113,22 @@ p {
   padding-bottom: 1em;
 }
 
-li > a {
+li a {
   font-weight: bold;
   text-decoration: none;
   color: black;
-  font: 600 1.375rem/1.25 'Barlow',sans-serif;
   text-transform: none;
   border-left: 4px solid var(--primary-color);
   padding: 0.1rem 0.65rem;
   hyphens: auto;
 }
 
-li > a:hover {
+li  a:hover {
 
 color: var(--secondary-color);
 cursor: pointer;
 
 }
-
-
-
 
 
 nav.menuNav{
@@ -169,7 +144,7 @@ ul.menu {
  /* border:3px solid black;*/
 }
 
-li.menu-item {
+li.menu-item, li.submenu-item {
   font : 500 1.125rem / 1.625rem 'Barlow', sans-serif;
   flex:1;
 /*  scroll-margin-top: 30em;*7
@@ -178,7 +153,9 @@ li.menu-item {
   
 }
 
-
+li.menu-item {
+  font: 600 1.375rem/1.25 'Barlow',sans-serif;
+}
 .topCapsa {
 
   background-color: black;
@@ -212,36 +189,7 @@ li.menu-item {
   
 }
 
-
-
-
-
-
-
-   
-nav.subMenuNav  {
-      
-      padding: 1em;
-      align-items: flex-start;
-   
-  }
-
-  nav.subMenuNav > ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      text-align: left;
-    
-  }
-
-  nav.subMenuNav > ul > li {
-      display: inline-block;
-      cursor : pointer;
-      font-size: 2px;
-      color: red;
-    
-  }
-
+ 
   .imatgeRound, .imatgeRoundH {
     overflow: hidden;
     width: 35%; 
@@ -258,8 +206,6 @@ nav.subMenuNav  {
   .imatgeRoundH {
     width: 25%; 
    }
-  
-
   
   
 
