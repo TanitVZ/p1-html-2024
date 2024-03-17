@@ -93,7 +93,14 @@
     <main>
       <section id="quiSom">
         <h2>Qui som?</h2>
-        <div>
+        <div class="flexRow">
+          <div class="imatgeRoundH">
+            <img
+              src="resources/facana.jpg"
+              alt="imatge de la façana de l'Ateneu"
+            />
+          </div>
+        <div class="flex_3">
           <p>
             L’Ateneu Popular La Màquia és un espai obert de reunions, intercanvi
             i col·laboració que busca promoure el desenvolupament i el benestar
@@ -109,6 +116,8 @@
             promoció d'idees que fomentin el progrés social i el suport a la
             cultura popular.
           </p>
+        </div></div>
+        <div>
           <p>
             L’Ateneu Popular és part d'un moviment unitari que promou la
             col·laboració entre diversos sectors de la societat.
@@ -139,6 +148,7 @@
             una xarxa de solidaritat i col·laboració arreu de Catalunya.
           </p>
         </div>
+     
       </section>
       <section id="activitats" href="#activitats">
         <h2>Activitats</h2>
@@ -154,16 +164,24 @@
             són una part destacada de la nostra programació, oferint-nos la
             oportunitat de debatre i reflexionar sobre pel·lícules
           </p>
+        </div>
+        <nav class="subMenuNav" role="navigation">
+          <ul id="llistaActivitats" class="menu">
+            <li id="activitat1" class="menu-item">Correbars</li>
+            <li id="activitat2" class="menu-item">Calçotada</li>
+            <li id="activitat3" class="menu-item">Vermuts</li>
+          </ul>
+        </nav>
 
-          <nav class="subMenuNav" role="navigation">
-            <ul id="llistaActivitats" class="menu">
-              <li id="activitat1" class="menu-item">Correbars</li>
-              <li id="activitat2" class="menu-item">Calçotada</li>
-              <li id="activitat3" class="menu-item">Vermuts</li>
-            </ul>
-          </nav>
+        <div id="infoActivitat1" class="flexRow flex_1 infoActivitat">
+          <div class="imatgeRound">
+            <img
+              src="resources/correbars.jpeg"
+              alt="imatge de Sonaquetomba al Correbars"
+            />
+          </div>
 
-          <div id="infoActivitat1" class="infoActivitat">
+          <div class="flex_3">
             El primer Correbars de Gavà, celebrat fa 10 anys, va néixer com una
             forma de protesta. Durant molt de temps, la Festa Major de Sant Pere
             havia estat mancada d'interès, i moltes persones reclamàven unes
@@ -171,13 +189,30 @@
             decidir prendre la iniciativa i vam omplir els carrers amb el so de
             la batucada i una cervesa ben fresca a la ma.
           </div>
-          <div id="infoActivitat2" class="infoActivitat">
+        </div>
+        <div id="infoActivitat2" class="flexRow flex_1 infoActivitat">
+          <div class="imatgeRound">
+            <img
+              src="resources/calcotada.jpg"
+              alt="imatge de la calçotada 2024"
+            />
+          </div>
+          <div class="flex_3">
             Fa més de 10 anys que celebrem la nostra tradicional calçotada a
             l'Ateneu! Cada any triem un tema important que ens preocupa, des de
             la conservació del medi ambient fins a la protecció del nostre
             patrimoni cultural.
           </div>
-          <div id="infoActivitat3" class="infoActivitat">
+        </div>
+
+        <div id="infoActivitat3" class="flexRow flex_1 infoActivitat">
+          <div class="imatgeRound">
+            <img
+              src="resources/vermut2.jpg"
+              alt="imatge de l'Ateneu en un vermut"
+            />
+          </div>
+          <div class="flex_3">
             Els vermuts són una altra de les activitats destacades, amb
             actuacions en directe . Les versions de vermut enllaunades a 45rpm
             afegeixen un toc especial a aquests esdeveniments, transportant-nos
@@ -231,21 +266,14 @@
     const lista = document.getElementById("llistaActivitats");
     const divsContenido = document.querySelectorAll(".infoActivitat");
 
-    // Agrega un event listener a la lista
     lista.addEventListener("click", function (event) {
       const activitat = event.target;
 
-      // Verifica si el elemento clicado es un li
       if (activitat.tagName === "LI") {
-        // Obtiene el id del li clicado
         const idLiActiu = activitat.id;
-
-        // Recorre los divs de contenido
         divsContenido.forEach(function (div) {
-          // Si el id del div coincide con el id del li clicado, lo muestra; de lo contrario, lo oculta
-
           if (div.id === "infoActivitat" + idLiActiu.slice(9)) {
-            div.style.display = "block";
+            div.style.display = "flex";
           } else {
             div.style.display = "none";
           }
