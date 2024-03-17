@@ -79,6 +79,7 @@
             />
             <img src="resources/logoPetit.png" alt="Logo Ateneu La Màquia" />
           </picture>
+ 
           <nav class="menuNav" role="navigation">
             <ul class="menu">
               <li class="menu-item"><a href="#quiSom">Qui som?</a></li>
@@ -104,7 +105,7 @@
           <p>
             L’Ateneu Popular La Màquia és un espai obert de reunions, intercanvi
             i col·laboració que busca promoure el desenvolupament i el benestar
-            de la nostra comunitat.
+            de la nostra societat.
           </p>
           <p>
             Ens centrem en les qüestions locals i treballem per abordar els
@@ -116,12 +117,13 @@
             promoció d'idees que fomentin el progrés social i el suport a la
             cultura popular.
           </p>
-        </div></div>
-        <div>
           <p>
             L’Ateneu Popular és part d'un moviment unitari que promou la
             col·laboració entre diversos sectors de la societat.
           </p>
+        </div></div>
+        <div>
+ 
           <p>
             El compromís amb la comunitat local, amb les necessitats dels
             nostres barris i pobles i, és clar, amb la promoció d'una
@@ -129,9 +131,9 @@
           </p>
 
           <p>
-            Ens comprometem a fer de l'Ateneu un espai acollidor i modern,
-            arrelat a la realitat del nostre entorn. A més, ens comprometem a
-            contribuir a la construcció d'una societat més cohesionada des de
+            L'Ateneu un espai acollidor i modern,
+            arrelat a la realitat del nostre entorn. On
+            contribuim a la construcció d'una societat més cohesionada des de
             valors d'inclusió i igualtat. Però, és important destacar que també
             necessitem la implicació i participació de tothom. Aquest és el
             principi rector de l'Ateneu Popular La Màquia.
@@ -139,11 +141,11 @@
 
           <p>
             Volem ser un punt de trobada per reforçar el teixit associatiu del
-            sud del Baix Llobregat. L'Ateneu estarà obert a tothom que vulgui
+            sud del Baix Llobregat. L'Ateneu està obert a tothom que vulgui
             contribuir.
           </p>
           <p>
-            L'Ateneu Popular La Màquia s'unirà a la gran diversitat de centres
+            L'Ateneu Popular La Màquia forma part de la gran diversitat de centres
             cívics, associacions i espais socials que històricament han teixit
             una xarxa de solidaritat i col·laboració arreu de Catalunya.
           </p>
@@ -260,36 +262,7 @@
         </div>
       </section>
     </main>
+    <script src="script.js"></script>
   </body>
 
-  <script>
-    const lista = document.getElementById("llistaActivitats");
-    const divsContenido = document.querySelectorAll(".infoActivitat");
-
-   
-    lista.addEventListener("click", function (event) {
-      const activitat = event.target;
-
-      if (activitat.tagName === "A") {
-        const idLiActiu = activitat.id;
-        divsContenido.forEach(function (div) {
-          if (div.id === "infoActivitat" + idLiActiu.slice(9)) {
-            if (isMobile())  
-              div.style.display = "contents"; 
-            else {
-             div.style.display = "flex";
-
-            }
-          } else {
-            div.style.display = "none";
-          }
-        });
-      }
-    });
-
-    function isMobile() {
-      return window.innerWidth <= 650; 
-    }
-
-  </script>
 </html>
