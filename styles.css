@@ -1,25 +1,26 @@
 
 
 body {
-   font-family: Arial, Helvetica, sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif;*/
+ font: 500 1.125rem / 1.625rem 'Barlow', sans-serif;
    display:flex;
 flex-direction: column;
 column-gap: 1.5rem;
 align-items: flex-start;
 overflow: auto;
-border: 5px solid yellow;
+/*border: 5px solid yellow;*/
 }
 
 header {
 
   flex:1;
   height: 30em;
-  border: 5px solid red;
+ /* border: 5px solid red;*/
 }
 main {
 padding-top: 12em;
 flex:3;
-border: 5px solid blue;
+/*border: 5px solid blue;*/
 scroll-padding-top: 30em;
 
 }
@@ -29,7 +30,11 @@ h1, h2 {
   
 }
 
+section {
 
+  margin-left: 2em;
+  margin-right:2em;
+}
 section > div > div {
 
    display: flex;
@@ -165,6 +170,9 @@ li.menu-item:active {
 
 }
 
+#infoActivitat1 {
+  display:"";
+}
 
 .infoActivitat {
   display: none;
@@ -176,9 +184,7 @@ li.menu-item:active {
   color :red;
 }
 
-#infoActivitat1 {
-  display:"";
-}
+
 
 #calsotada {
   color :red;
@@ -210,7 +216,7 @@ nav.subMenuNav  {
  
 
 :target {
-  scroll-margin-top: 200px;
+  scroll-margin-top: 210px;
 }
 
 @media (max-width : 600px) {
